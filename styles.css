@@ -1,0 +1,516 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Custom Classes */
+.wrapper_xs {
+    padding: 0 40px !important;
+    margin: 0;
+}
+
+.wrapper_sm {
+    padding: 80px 60px !important;
+    margin: 0;
+}
+
+.wrapper_lg {
+    padding: 40px 40px !important;
+    margin: 0;
+}
+
+/* Utility Classes */
+
+.color_black {
+    color: black !important;
+}
+
+.c_d_blue {
+    color: #005085;
+}
+
+.bg_secondary {
+    background-color: #f5f6fb;
+}
+
+.cp {
+    cursor: pointer;
+}
+
+.ff_ws {
+    font-family: 'Work Sans', sans-serif;
+}
+
+/* Top Nav */
+
+.top_nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 60px;
+    
+    background-color: #005085;
+    color: white;
+}
+
+.top_nav_dropdown {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    position: relative;
+    cursor: pointer;
+}
+
+.fa-chevron-down {
+    font-size: 12px;
+    transition: transform 200ms linear;
+}
+
+#arrow_handle {
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    width: 100%;
+    opacity: 0;
+    z-index: 1;
+}
+
+#arrow_handle:checked + .fa-chevron-down {
+    transform: rotate(180deg);
+}
+
+.dropdown_list li, .dropdown_selected {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    list-style: none;
+}
+
+.top_nav_dropdown img {
+    width: 20px;
+}
+
+.top_nav_dropdown p {
+    margin: 0;
+}
+
+.dropdown_list {
+    display: none;
+    position: absolute;
+    top: 80%;
+    margin: 0;
+    padding: 5px 0;
+    border-radius: 6px;
+    width: auto;
+    white-space: nowrap; 
+    z-index: 10;
+
+    transform: scaleX(0);
+
+    background-color: #fff;
+    box-shadow: 0 0 3px 0 black;
+
+    transition: transform 300ms linear;
+}
+
+
+.dropdown_list li {
+    padding: 0 10px;
+}
+
+.dropdown_list li:hover {
+    background-color: rgb(212, 212, 212)
+}
+
+#arrow_handle:checked ~ .dropdown_list {
+    display: block;   
+    transform: scaleX(1);
+}
+
+/* Utility Classes End */
+
+/* Main Nav Bar */
+
+.main_nav {
+    height: 90px;
+}
+
+.main_nav p {
+    margin: 0;
+}
+
+.fa-car-side {
+    color: #005085;
+    font-size: 24px;
+}
+
+.nav_heading {
+    margin: 0;
+    font-weight: bold;
+    color: #1aa9e5;
+}
+
+.nav_btn {
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+
+    background-color: #1aa9e5;
+    color: #fff;
+}
+
+/* Main Nav Toogler */
+
+
+.nav-toogle {
+    display: none;
+}
+
+#checkbox {
+    display: none;
+}
+
+.toggle {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    transition-duration: .5s;
+}
+
+.bars {
+    width: 80%;
+    height: 4px;
+    background-color: rgb(160, 160, 160);
+    border-radius: 4px;
+}
+
+#bar2 {
+    transition-duration: .8s;
+}
+
+#bar1,#bar3 {
+    width: 50%;
+}
+
+#checkbox:checked + .toggle + .nav-links-responsive {
+    right: 0%;
+}
+
+#checkbox:checked + .toggle .bars {
+    position: absolute;
+    transition-duration: .5s;
+}
+
+#checkbox:checked + .toggle #bar2 {
+    transform: scaleX(0);
+    transition-duration: .5s;
+}
+
+#checkbox:checked + .toggle #bar1 {
+    width: 80%;
+    transform: rotate(45deg);
+    transition-duration: .5s;
+}
+
+#checkbox:checked + .toggle #bar3 {
+    width: 80%;
+    transform: rotate(-45deg);
+    transition-duration: .5s;
+}
+
+#checkbox:checked + .toggle {
+    transition-duration: .5s;
+    transform: rotate(180deg);
+}
+
+.nav_btn:hover {
+ background-color: darkblue;
+}
+/* Hero Section */
+
+.hero_section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 50px 0;
+    background-image: url(https://smit-classtest.netlify.app/assets/images/HeroCar.png);
+    background-repeat: no-repeat;
+    background-position: 100% 50%;
+}
+
+.hero_content {
+    width: 600px;
+}
+
+.hero_content > h1 {
+    font-size: 50px;
+    font-weight: 600;
+}
+
+/* Search Container */
+
+.search_main {
+    width: 100%;
+}
+
+.search_container {
+    position: absolute;
+    top: 90%;
+    width: 80% !important;
+    box-shadow: 0 5px 20px 0 rgb(227, 227, 227);
+    border-radius: 10px;
+    width: auto;
+    background-color: #fff;
+}
+
+.search_container p {
+    margin: 0;
+}
+
+.fa-clock, .fa-calendar-alt {
+    font-size: 25px;
+}
+
+.search_container > div > div {
+    border-left: 1px solid rgb(206, 206, 206);
+}
+
+.search_container > div:first-child, .search_container > div:last-child {
+    border: none;
+}
+
+.search_container > div:last-child {
+    background-color: #1aa9e5;
+    border-radius: 0 10px 10px 0;
+}
+
+.search_container > div:last-child:hover {
+    background-color: darkblue;
+    border-radius: 0 10px 10px 0;
+}
+
+#search_input {
+    border: none;
+    outline: none;
+}
+
+.fa-search {
+    font-size: 25px;
+}
+
+
+/* Why Us Section */
+
+.gradient {
+    background-image: linear-gradient(to right, #e65425, #e96d2a, #ec8334, #ee9841, #f0Ab51, #ee9841, #ec8334, #e96d2a, #e65425, #e96d2a, #ec8334, #ee9841, #f0Ab51);
+  -webkit-background-clip: text; /* For older browsers that support WebKit prefix */
+  background-clip: text;
+  color: transparent; /* Make the text transparent so the gradient shows through */    
+}
+
+.why_us {
+    font-weight: 600;
+    margin-top: 120px;
+}
+
+.why_us_card {
+    margin-top: 100px;
+}
+
+.why_us_card > div {
+    border-left: 1px solid rgb(206, 206, 206);
+}
+
+.why_us_card > div > h1 {
+    color: #1aa9e5;
+    font-size: 45px;
+    font-weight: 500;
+}
+
+.why_us_card > div > h4 {
+    font-size: 20px;
+}
+
+/* Rental Car Section */
+
+.rental_car_sec i , .rental_car_sec p{
+    color: #1aa9e5;
+}
+
+.see_more_btn button{
+    padding: 15px 0;
+    border-radius: 8px;
+    border: 1px solid #1aa9e5;
+    color: #1aa9e5;
+    transition: 200ms;
+}
+
+.see_more_btn button:hover {
+    background-color: #1aa9e5;
+    color: white;
+    scale: 0.98;
+}
+
+.see_more_btn button:hover i {
+    color: #fff;
+}
+
+/* Car Booking Section */
+
+.car_booking_sec {
+    background-color: #fffcf7;
+}
+
+.filter_border {
+    border-radius: 4px;
+    border: 1px solid rgb(205, 203, 203);
+}
+
+.rent_cards {
+    border-radius: 6px;
+    box-shadow: 0 0 20px 0 rgb(221, 219, 219);
+    background-color: #fff;
+}
+
+.rent_cards h4 {
+    color: #005085;
+}
+
+.rent_cards button {
+    padding: 10px 0;
+    border: none;
+    outline: none;
+    border-radius: 0 0 6px 6px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    background-color: #1aa9e5;
+    color: #fff;
+}
+
+/* Rental Deals Section */
+
+/* Customer Sections */
+
+.customer_cards > div:nth-child(2) {
+    height: 430px;
+    width: 400px;
+}
+
+.customer_cards > div:first-child, .customer_cards div:last-child {
+    height: 330px;
+    width: 300px;
+}
+
+.customer_cards > div {
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 0 30px 0 rgba(221, 219, 219, 0.665);
+    min-height: fit-content;
+    overflow: hidden;
+}
+
+/* FAQ's Section */
+
+.accordion-item, .accordion-body {
+    border: 1px solid rgb(236, 236, 236);
+    border-top: none;
+    border-radius: 0 0 16px 16px;
+    margin-bottom: 20px;
+    margin-bottom: 5px;
+}
+
+.accordion-button {
+    border: 1px solid rgb(236, 236, 236) !important;
+    border-bottom:  none!important;
+    border-radius: 16px !important;    
+}
+
+  .accordion-button::after {
+    display: none;
+  }
+
+  .accordion-button:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    background-color: #fff !important;
+    border-radius: 16px 16px 0 0!important;    
+  }
+  
+  #one, #two, #three {
+    padding: 0 9px ;
+    background-color:  rgb(243, 243, 243);
+    border: 1px solid rgb(216, 216, 216);
+    border-radius: 10px;
+  }
+
+  .collapsed p {
+    align-items: center;
+  }
+
+/* Footer */
+
+.footer {
+    background-color: #005085;
+}
+
+.footer * {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 18px;
+    color: #fff;
+}
+
+.footer li {
+    list-style: none;
+    font-weight: 300;
+}
+
+.footer ul {
+    padding: 0;
+}
+
+.contact_footer img {
+    width: 20px;
+}
+
+.social_media_icons > img{
+    width: 35px;
+    margin-top: 10px;
+}
+
+.lower_footer {
+    width: 100%;
+    height: 80px;
+}
+
+.lower_footer > p {
+    width: 90%;
+    height: 100%;
+    border-top: 1px solid rgba(242, 239, 239, 0.274);
+}
+/* Footer End */
+
+.car_booking_sec {
+    margin-top: 48px;
+}
+
+.row {
+    margin-top: 48px;
+}
+
+.display-flex {
+    display: flex;
+}
+
+.customer_cards {
+    display: flex;
+}
