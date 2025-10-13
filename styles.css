@@ -312,7 +312,7 @@
 /* Why Us Section */
 
 .gradient {
-    background-image: linear-gradient(to right, #e65425, #e96d2a, #ec8334, #ee9841, #f0Ab51, #ee9841, #ec8334, #e96d2a, #e65425, #e96d2a, #ec8334, #ee9841, #f0Ab51);
+    background-image: linear-gradient(to right, #000, #e96d2a, #ec8334, #ee9841, #f0Ab51, #ee9841, #ec8334, #e96d2a, #e65425, #e96d2a, #ec8334, #ee9841, #f0Ab51);
   -webkit-background-clip: text; /* For older browsers that support WebKit prefix */
   background-clip: text;
   color: transparent; /* Make the text transparent so the gradient shows through */    
