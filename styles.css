@@ -6,17 +6,17 @@
 }
 
 /* Custom Classes */
-.wrapper_xs {
+.wrap_xs {
     padding: 0 40px !important;
     margin: 0;
 }
 
-.wrapper_sm {
+.wrap_items {
     padding: 80px 60px !important;
     margin: 0;
 }
 
-.wrapper_lg {
+.wrap_left {
     padding: 40px 40px !important;
     margin: 0;
 }
@@ -39,7 +39,7 @@
     cursor: pointer;
 }
 
-.ff_ws {
+.ff_is {
     font-family: 'Inter', sans-serif;
 }
 
