@@ -260,17 +260,20 @@
 /* Search Container */
 
 .search_main {
-    width: 100%;
+    width: 80px;
 }
 
 .search_container {
     position: absolute;
     top: 90%;
     width: 80% !important;
+    height: 110px;
     box-shadow: 0 5px 20px 0 rgb(227, 227, 227);
-    border-radius: 10px;
+    border-radius: 16px;
     width: auto;
     background-color: #fff;
+    align-items: center;
+    padding: 10px;
 }
 
 .search_container p {
@@ -291,13 +294,15 @@
 
 .search_container > div:last-child {
     background-color: #1aa9e5;
-    border-radius: 0 10px 10px 0;
+    border-radius: 8px;
+    height: 86px;
+    width: 100px;
 
 }
 
 .search_container > div:last-child:hover {
     background-color: darkblue;
-    border-radius: 0 10px 10px 0;
+    border-radius: 8px;
 }
 
 #search_input {
@@ -326,6 +331,10 @@
 
 .why_us_card {
     margin-top: 100px;
+    background-color: white;
+    box-shadow: 0 0 24px #0050851c;
+    border-radius: 18px;
+    padding: 20px 0px;
 }
 
 .why_us_card > div {
