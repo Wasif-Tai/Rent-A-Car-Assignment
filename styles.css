@@ -479,7 +479,7 @@
 /* Footer */
 
 .footer {
-  background: linear-gradient(to top, rgba(0, 0, 255, 0.486), blue);
+    background-color: #005085;
 }
 
 .footer * {
